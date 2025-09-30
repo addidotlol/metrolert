@@ -9,7 +9,15 @@
 		"cf-typegen": "wrangler types"
 	},
 	"devDependencies": {
+		"@types/node": "^24.0.10",
 		"typescript": "^5.5.2",
 		"wrangler": "^4.23.0"
+	},
+	"dependencies": {
+		"@skyware/bot": "^0.3.11",
+		"@std/csv": "jsr:^1.0.6",
+		"@zip.js/zip.js": "^2.7.63",
+		"gtfs-realtime-bindings": "^1.1.1",
+		"rettiwt-api": "^6.0.5"
 	}
 }

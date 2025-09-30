@@ -1,0 +1,21 @@
+diff --git a/dist/requests/Tweet.js b/dist/requests/Tweet.js
+index 1db73badcb4a23e90f85290a89f1f7d75a4a0572..78dee213a2171589e963076089baa0ea4da8a075 100644
+--- a/dist/requests/Tweet.js
++++ b/dist/requests/Tweet.js
+@@ -208,7 +208,7 @@ class TweetRequests {
+         const parsedArgs = new PostArgs_1.NewTweet(args);
+         return {
+             method: 'post',
+-            url: 'https://x.com/i/api/graphql/IID9x6WsdMnTlXnzXGq8ng/CreateTweet',
++            url: parsedArgs.text.length > 280 ? 'https://x.com/i/api/graphql/ZSIkj1kuaBs6BQjvBz3W0w/CreateNoteTweet' : 'https://x.com/i/api/graphql/IID9x6WsdMnTlXnzXGq8ng/CreateTweet',
+             data: {
+                 /* eslint-disable @typescript-eslint/naming-convention */
+                 variables: {
+@@ -221,6 +221,7 @@ class TweetRequests {
+                 },
+                 features: {
+                     premium_content_api_read_enabled: false,
++                    payments_enabled: false,
+                     communities_web_enable_tweet_community_results_fetch: true,
+                     c9s_tweet_anatomy_moderator_badge_enabled: true,
+                     responsive_web_grok_analyze_button_fetch_trends_enabled: false,
